@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/pyithon3
 """
-Function that queries the 'Reddit API'
-and prints the titles of the first 10 hot posts listed for a given subreddit
+    Function that queries the 'Reddit API'
+    and prints the titles of the first 10 hot
+    posts listed for a given subreddit
 """
 import requests
 
@@ -16,7 +17,6 @@ def top_ten(subreddit):
         data = response.json()['data']
         for post in data['children'][:10]:
             print(post['data']['title'])
-
     else:
         print(None)
 
